@@ -37,12 +37,11 @@ def question1():
     # type: float
     # Calculate the probability.
     # Compute P(S = yes | B = bad)
-    P_S_yes_given_B_bad_F_notempty = 1
+    P_S_yes_given_B_bad_F_notempty = .1
     P_S_yes_given_B_bad_F_empty = 0
     P_G_empty_given_B_bad_F_notempty = 0.2
     P_G_empty_given_B_bad_F_empty = 0.9
-    c = P_F_empty * P_G_empty_given_B_bad_F_empty * P_S_yes_given_B_bad_F_empty + P_F_notempty * P_G_empty_given_B_bad_F_notempty * P_S_yes_given_B_bad_F_notempty#value of first term should be zero
-    # print(c)
+    c = P_F_notempty*P_S_yes_given_B_bad_F_notempty#value of first term should be zero
     answers['(c)'] = c
     return answers
 
@@ -113,7 +112,7 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = True
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
     answers['(b), independent'] = True
@@ -155,10 +154,10 @@ def question6():
     answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] = "p"
+    answers['(a) C2-TPR'] = "2*p"
 
     # type: eval_float
-    answers['(a) C1-FPR'] = "2*p"
+    answers['(a) C1-FPR'] = "p"
 
     # type: eval_float
     answers['(a) C2-FPR'] = "2*p"
